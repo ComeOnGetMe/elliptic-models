@@ -89,7 +89,7 @@ class Ellipsoid(object):
             try:
                 ys = utils.real_quad_roots(B, C*x + E, A * x**2 + D * x + F - 1)
                 self.logger.debug("get y: {}".format(ys))
-                y = ys[0]
+                y = ys[0]  # TODO: get which point?
             except AssertionError as e:
                 self.logger.error(e)
                 continue

@@ -28,7 +28,6 @@ def vis_plane():
     ax.set_xlabel('X Label')
     ax.set_ylabel('Y Label')
     ax.set_zlabel('Z Label')
-    plt.show()
 
 
 def vis_ellipsoid():
@@ -49,7 +48,6 @@ def vis_ellipsoid():
     ax.set_xlabel('X Label')
     ax.set_ylabel('Y Label')
     ax.set_zlabel('Z Label')
-    plt.show()
 
 
 def vis_both():
@@ -92,9 +90,9 @@ def vis_intersection():
     fig, ax = vis_both()
     ax.scatter(intersect_pts[:, 0], intersect_pts[:, 1], intersect_pts[:, 2], c='g')
     plt.title("arc length: ".format(arc_len))
-    plt.show()
 
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG)
     vis_intersection()
+    plt.show()
